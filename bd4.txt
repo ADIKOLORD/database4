@@ -1,0 +1,95 @@
+1)
+
+select count(users) from users;
+ count 
+-------
+ 10000
+(1 row)
+
+2)
+select max(followers) from users;
+   max   
+---------
+ 9996187
+(1 row)
+
+
+3)
+select * from users where followers > (select max(followers) from users) - 1;
+
+4)
+select avg(followers) from users;
+         avg          
+----------------------
+ 5026831.355600000000
+(1 row)
+
+
+5)
+select * from users order by(login);
+
+
+6)
+select * from users order by(country);
+
+
+7)
+select * from users order by(email);
+
+
+8)
+select user_id, login from users;
+
+
+9)
+select login from users where login like '%as%' or login like '%cg%' or login like '%si%';
+
+
+11)
+select login from users where login like '%lol' or login like '%kan' or login like '%ck';
+
+
+13)
+select login from users where followers = (select max(followers) from users) and country = 'Israel';
+
+
+14)
+select * from users where email = '';
+
+15)
+select count(users) from users where email = '' and country = 'Chyi';
+
+
+16)
+select login, phone_number from users where profession = 'Web Developer';
+
+
+17)
+update users set email = 'user@gmail.com' where email = '';
+UPDATE 75
+
+
+18)
+select country from users where profession = '';
+
+19)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
